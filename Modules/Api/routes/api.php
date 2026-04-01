@@ -9,20 +9,16 @@ use Modules\Api\Http\Controllers\V1\Auth\AuthController;
 Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
     Route::middleware('auth:sanctum')->group(function () {
-
         Route::get('/me', [AuthController::class, 'me']);
         Route::post('/logout', [AuthController::class, 'logout']);
-        Route::apiResource('movies', MovieController::class);
 
         Route::middleware('role:admin')->group(function () {
-            // Karta
-            Route::post('/payment/{provider}/cards',        [PaymentController::class, 'addCard']);
-            Route::post('/payment/{provider}/cards/verify', [PaymentController::class, 'verifyCard']);
-            // To'lov
-            Route::post('/payment/{provider}/pay',                      [PaymentController::class, 'pay']);
-            Route::delete('/payment/{provider}/transactions/{id}/cancel', [PaymentController::class, 'cancel']);
+            Route::post('/purchases', [\Modules\Api\app\Http\Controllers\V1\Purchase\PurchaseController::class, 'purchase']);
+            Route::post('/purchases/refund', [\Modules\Api\app\Http\Controllers\V1\Purchase\PurchaseController::class, 'refundProvider']);
+            Route::get('/products/available', [\Modules\Api\app\Http\Controllers\V1\Product\ProductController::class, 'availableProducts']);
+            Route::post('/orders', [\Modules\Api\app\Http\Controllers\V1\Order\OrderController::class, 'createOrder']);
+            Route::get('/reports/remaining-quantities', [\Modules\Api\app\Http\Controllers\V1\Report\ReportController::class, 'remainingQuantities']);
+            Route::get('/reports/batch-profit', [\Modules\Api\app\Http\Controllers\V1\Report\ReportController::class, 'batchProfit']);
         });
     });
-    // Webhook — auth shart emas
-    Route::post('/payment/{provider}/webhook', [PaymentController::class, 'webhook']);
 });
