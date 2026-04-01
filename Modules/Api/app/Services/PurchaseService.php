@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Api\app\Services;
+namespace Modules\Api\Services;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use Modules\Api\app\Models\Batch;
-use Modules\Api\app\Models\BatchItem;
-use Modules\Api\app\Models\ProviderRefund;
+use Modules\Api\Models\Batch;
+use Modules\Api\Models\BatchItem;
+use Modules\Api\Models\ProviderRefund;
 
 class PurchaseService
 {

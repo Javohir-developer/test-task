@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\Api\app\Services;
+namespace Modules\Api\Services;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use Modules\Api\app\Models\Order;
-use Modules\Api\app\Models\OrderItem;
-use Modules\Api\app\Models\BatchItem;
-use Modules\Api\app\Models\Product;
+use Modules\Api\Models\Order;
+use Modules\Api\Models\OrderItem;
+use Modules\Api\Models\BatchItem;
+use Modules\Api\Models\Product;
 
 class OrderService
 {

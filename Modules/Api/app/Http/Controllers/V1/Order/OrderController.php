@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Api\app\Http\Controllers\V1\Order;
+namespace Modules\Api\Http\Controllers\V1\Order;
 
 use Modules\Api\Http\Controllers\BaseApiController;
-use Modules\Api\app\Http\Requests\V1\Order\CreateOrderRequest;
-use Modules\Api\app\Services\OrderService;
+use Modules\Api\Http\Requests\V1\Order\CreateOrderRequest;
+use Modules\Api\Services\OrderService;
 
 class OrderController extends BaseApiController
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Api\app\Http\Controllers\V1\Report;
+namespace Modules\Api\Http\Controllers\V1\Report;
 
 use Modules\Api\Http\Controllers\BaseApiController;
-use Modules\Api\app\Http\Requests\V1\Report\RemainingQuantitiesRequest;
-use Modules\Api\app\Services\ReportService;
+use Modules\Api\Http\Requests\V1\Report\RemainingQuantitiesRequest;
+use Modules\Api\Services\ReportService;
 
 class ReportController extends BaseApiController
 {

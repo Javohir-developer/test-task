@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Api\app\Http\Controllers\V1\Product;
+namespace Modules\Api\Http\Controllers\V1\Product;
 
 use Modules\Api\Http\Controllers\BaseApiController;
-use Modules\Api\app\Services\InventoryService;
+use Modules\Api\Services\InventoryService;
 
 class ProductController extends BaseApiController
 {

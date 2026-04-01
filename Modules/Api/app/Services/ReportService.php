@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Api\app\Services;
+namespace Modules\Api\Services;
 
 use Illuminate\Support\Facades\DB;
-use Modules\Api\app\Models\Batch;
+use Modules\Api\Models\Batch;
 
 class ReportService
 {

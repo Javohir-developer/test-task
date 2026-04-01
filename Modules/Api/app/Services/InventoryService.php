@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Api\app\Services;
+namespace Modules\Api\Services;
 
 use Illuminate\Support\Facades\DB;
-use Modules\Api\app\Models\Product;
+use Modules\Api\Models\Product;
 
 class InventoryService
 {

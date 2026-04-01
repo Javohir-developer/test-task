@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Api\app\Http\Controllers\V1\Purchase;
+namespace Modules\Api\Http\Controllers\V1\Purchase;
 
 use Modules\Api\Http\Controllers\BaseApiController;
-use Modules\Api\app\Http\Requests\V1\Purchase\PurchaseRequest;
-use Modules\Api\app\Http\Requests\V1\Purchase\RefundProviderRequest;
-use Modules\Api\app\Services\PurchaseService;
+use Modules\Api\Http\Requests\V1\Purchase\PurchaseRequest;
+use Modules\Api\Http\Requests\V1\Purchase\RefundProviderRequest;
+use Modules\Api\Services\PurchaseService;
 
 class PurchaseController extends BaseApiController
 {
