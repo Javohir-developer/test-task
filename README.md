@@ -49,8 +49,14 @@ Local serverni va Vite (frontend)ni bir vaqtda ishga tushirish uchun:
 npm run dev
 ```
 
+### 9. api docs
+"knuckleswtf/scribe" dan foydalanilgan barcha api doclarini kurish mumkin:
+```bash
+php artisan scribe:generate
+http://localhost/docs
+```
+
 ---
 
 ### Qo'shimcha ma'lumotlar:
 - **Admin paneli**: Loyihada RBAC (Role-Based Access Control) bor. Seed qilinganidan so'ng, admin foydalanuvchisi avtomatik yaratiladi.
-- **Elasticsearch**: Loyihada Elasticsearch sozlamalari mavjud. Agar qidiruv tizimi ishlatilsa, Elasticsearch servisi yoqilgan bo'lishi kerak.
